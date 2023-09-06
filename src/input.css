@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: white;
+  }
+
+.custom-card {
+    @apply h-full p-6 rounded-lg border-2 border-gray-700 backdrop-blur-xs flex flex-col relative overflow-hidden transition-all hover:scale-105 hover:border-purple-300 hover:shadow-[0_0_20px_theme('colors.indigo.400')];
+  }
+.custom-card-nav {
+  @apply h-full p-2 rounded-3xl border-2 border-black backdrop-blur-xs flex flex-col relative overflow-hidden transition-all hover:scale-95 hover:border-purple-300 hover:shadow-[0_0_10px_theme('colors.indigo.500')];
+}
+
+  .scene-container {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  #particles-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

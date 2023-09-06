@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "tailwind": "npx tailwind -i ./src/input.css -o ./src/output.css --watch",
+    "prettier": "npx prettier --write ./build/*.html"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "next-themes": "^0.2.1",
+    "vite": "^4.1.1"
+  }
+}

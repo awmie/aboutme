@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://kit.fontawesome.com/354d48ccb6.js" crossorigin="anonymous"></script>
+    <title>Amritava Kole</title>
+</head>
+<body class="antialiased bg-body text-black leading-relaxed bg-purple-100 dark:bg-black dark:text-white dark:bg-none">
+<div id='particles-js'></div>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<header id="home" class='custom-card-nav'>
+  <div class= "container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center mb-4 md:mb-0">
+      <img src="https://cdn.discordapp.com/attachments/1126359222712541184/1148849218858008676/awme.png" alt="" width="40px">
+      <span class="ml-3 text-xl flex-row items-center">Portfolio</span>
+    </a>
+      <nav class="bg-purple-100  md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center dark:bg-black dark:text-white">
+        <a class="mr-5 hover:text-purple-400 cursor-pointer hover:text-xl transition-all ease-in-out" href="#home">Home</a>
+        <a class="mr-5 hover:text-purple-400 cursor-pointer hover:text-xl transition-all ease-in-out" href="#about">About</a>
+        <a class="mr-5 hover:text-purple-400 cursor-pointer hover:text-xl transition-all ease-in-out" href="#resume">Resume</a>
+        <a class="mr-5 hover:text-purple-400 cursor-pointer hover:text-xl transition-all ease-in-out" href="#contact">Contact</a>
+      </nav>
+  </div>
+
+<!-- header  -->
+</header>
+  <section class="body-font">
+      <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div class="text-center lg:w-2/3 w-full">
+          <h1 id = 'name' style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)" class="title-font sm:text-5xl text-4xl mb-4 font-medium text-purple-500">Amritava Kole</h1>
+          <p class="leading-relaxed mb-8 text-xl font-mono">I am a forth-year computer science student at Gautam Buddha University in Greater Noida. 
+              <br>
+              My current research interests include Machine Learning, Artificial Intelligence, and Python programming.
+          </p>
+          <div class="flex mt-6 justify-center">
+            <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <script>
+    let text = new SplitType('#name');
+    let characters = document.querySelectorAll('.char');
+
+    for(i=0; i<characters.length; i++){
+      characters[i].classList.add('translate-y-32')
+    }
+
+    gsap.to('.char',{
+      y: 0,
+      stagger: 0.05,
+      delay: 0.02,
+      duration: 1
+    });
+  </script>
+
+<div class="toggle-dark flex items-center justify-center w-full mb-12">
+  
+  <label for="toggleB" class="flex items-center cursor-pointer">
+    <!-- toggle -->
+    <div class="relative text-7xl md:5xl text-center transition-all hover:scale-105">
+      <i class="fa-solid fa-lightbulb"></i>
+      <div class='text-xs'>
+        <i>
+        <br>"Darkmode is always better,<br> unless it enters your life XD"
+        </i>
+      </div>
+    </div>
+  </label>
+</div>
+
+
+
+      <!--                                   EXPERIENCE section   -->
+
+<section id="" class="body-font overflow-hidden">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-col text-center w-full mb-20">
+      <p class="sm:text-4xl text-3xl font-medium title-font mb-4">Some of my works ⚙️</p>
+      <div class="flex mt-6 justify-center">
+        <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+      </div>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      <!-- Card 1 -->
+      <div class="p-3 xl:w-1/3 md:w-1/2 w-full">
+        <div class="custom-card">
+          <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Programming</h2>
+          <h1 class="text-2xl pb-4 mb-4 border-b border-gray-800 leading-none">Python</h1>
+          <p class="flex items-center text-green-500 mb-2 hover:text-green-300">
+            <a class="hover:animate-pulse" href="https://www.hackerrank.com/amritavakole" target="_blank">
+              <i class="fa-brands fa-hackerrank"></i>
+              <span class="ml-2"> Hackerrank: Silver level [★★★]</span>
+            </a>
+          </p>
+          <p class="flex items-center text-green-400 mb-2 hover:text-green-200">
+            <a class="hover:animate-pulse" href="https://github.com/awmie" target="_blank">
+              <i class="fa-brands fa-square-github"></i>
+              <span class="ml-2">My GitHub Portfolio</span>
+            </a>
+          </p>
+          <p class="text-xs mt-3">These are some of my Programming Experience in Python.</p>
+        </div>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="p-3 xl:w-1/3 md:w-1/2 w-full">
+        <div class="custom-card">
+          <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Intermediate</h2>
+          <h1 class="text-2xl leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+            <span>Artificial Intelligence</span>
+          </h1>
+          <p class="flex items-center text-blue-500 mb-2 hover:text-blue-300">
+            <a class="hover:animate-pulse" href="https://olympus1.mygreatlearning.com/course_certificate/MQZFJMEA" target="_blank">
+              <i class="fa-sharp fa-solid fa-g"></i>
+              <span class="ml-2">Certificate by Great Learning (Google)</span>
+            </a>
+          </p>
+          <p class="flex items-center text-green-500 mb-2 hover:text-green-200">
+            <a class="hover:animate-pulse" href="https://github.com/awmie/tictactoeAI.git" target="_blank">
+              <i class="fa-solid fa-robot"></i>
+              <span class="ml-2">Tic-Tac-Toe</span>
+            </a>
+          </p>
+          <p class="flex items-center text-purple-500 mb-2 hover:text-purple-200">
+            <a class="hover:animate-pulse" href="https://cert.devtown.in/verify/1PkpOk" target="_blank">
+              <i class="fa-solid fa-certificate"></i>
+              <span class="ml-2">7-days BootCamp @devtown</span>
+            </a>
+          </p>
+          <p class="text-xs mt-3">Achievements in AI.</p>
+        </div>
+      </div>
+      
+      <!-- Card 3-->
+      <div class="p-3 xl:w-1/3 md:items-center w-full">
+        <div class="custom-card">
+          <h2 class="text-sm tracking-widest title-font mb-1 font-medium">Github</h2>
+          <h1 class="text-2xl leading-none flex items-center pb-4 mb-4 border-b border-gray-800">
+            <span>Projects</span>
+          </h1>
+          <p class="flex items-center text-green-500 mb-2 hover:text-green-200">
+            <a class="hover:animate-pulse" href="https://github.com/awmie/tishmish.git" target="_blank">
+              <i class="fa-solid fa-code-branch"></i>
+              <span class="ml-2">Tishmish <br> - a discord music bot with <i class="fa-brands fa-spotify"></i> integration</span>
+            </a>
+          </p>
+          <p class="flex items-center text-green-500 mb-2 hover:text-green-200">
+            <a class="hover:animate-pulse" href="https://awmie.github.io/PythonOnline/" target="_blank">
+              <i class="fa-solid fa-code-branch"></i>
+              <span class="ml-2">Online Python <br> - an online python interpreter using Pyscript</span>
+            </a>
+          </p>
+          <p class="flex items-center text-indigo-400 mb-2 hover:text-indigo-300">
+            <a class="hover:animate-pulse" href="https://discord.com/api/oauth2/authorize?client_id=1007653203711639562&permissions=8&scope=bot" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+              <span class="ml-2">Discord Bot Link</span>
+            </a>
+          </p>
+          <p class="text-xs mt-3">This is one of my Personal Projects. If you have a Discord server, enjoy!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!--                              PORTFOLIO SECTION                       -->
+      <section id="portfolio" class="body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">Coding Skills 💾</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Some of my Coding skills</p>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+              <div class="custom-card">
+                <div class="text-9xl">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+                <h2 class="title-font font-medium mt-3 text-xl">Python Programming</h2>
+                <p class="leading-relaxed">Intermediate</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3 sm:w-1/2 w-full">
+              <div class="custom-card">
+                <div class="text-9xl">
+                  <i class="fa-brands fa-html5"></i>
+                </div>
+                <h2 class="title-font font-medium mt-3 text-xl">Web Dev</h2>
+                <p class="leading-relaxed">tailwind framework</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3 sm:items-center w-full">
+              <div class="custom-card">
+                <div class="text-9xl">
+                  <i class="fa-brands fa-square-js"></i>
+                </div>
+                <h2 class="title-font font-medium mt-3 text-xl">JavaScript</h2>
+                <p class="leading-relaxed">average</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+
+      <section id="portfolio" class="body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4">My other skills ✍️</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">I'm quite good at video editing 🖥</p>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="custom-card">
+                <img class="mx-auto my-auto h-20" src="https://cdn.discordapp.com/attachments/1126359222712541184/1148849218627313735/adobe-premiere-pro-icon.png" alt="Pr">
+                <h2 class="title-font font-medium mt-3 text-xl">Adobe Premiere Pro</h2>
+                <p class="leading-relaxed">50+ video edits</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="custom-card">
+                <img class="mx-auto my-auto h-20" src="https://cdn.discordapp.com/attachments/1126359222712541184/1148849219537477682/finalcutpro.png" alt="FCPX">
+                <h2 class="title-font font-medium mt-3 text-xl">Final Cut Pro</h2>
+                <p class="leading-relaxed">50+ video edits</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="custom-card">
+                <img class="mx-auto my-auto h-20" src="https://cdn.discordapp.com/attachments/1126359222712541184/1148849218396618812/adobe-after-effects.png" alt="Ae">
+                <h2 class="title-font font-medium mt-3 text-xl">Adobe After Effects</h2>
+                <p class="leading-relaxed">40+ videos</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+              <div class="custom-card">
+                <img class="mx-auto my-auto h-20" src="https://cdn.discordapp.com/attachments/1126359222712541184/1148849219235479572/canva.png" alt="canva">
+                <h2 class="title-font font-medium mt-3 text-xl">Canva Editing</h2>
+                <p class="leading-relaxed">50+ designs</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!--                              CONTACT  SECTION               -->
+
+      <section id="contact" class="body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 ">Any idea 💡 you wanna share?</h1>
+            <div class="flex mt-6 justify-center">
+              <div class="w-20 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap -m-4 text-center">
+            <div class="p-4 md:w-1/2 sm:w-1/2 w-full">
+              <div>
+                <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-black text-indigo-400 mb-5 flex-shrink-0 dark:bg-indigo-400 dark:text-black">
+                  <a href="https://www.google.com/search?q=gautam+buddha+university" target="_blank" class="text-5xl hover:text-6xl transition-all hover: animate-spin">
+                      <i class="fa-solid fa-compass"></i>
+                  </a>
+                </div>
+                <h2 class="title-font font-medium text-1xl ">Gautam Buddha University</h2>
+                <p class="leading-relaxed">You can find me here.</p>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 sm:w-1/2 w-full">
+              <div>
+                <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-black text-indigo-400 mb-5 flex-shrink-0 dark:bg-indigo-400 dark:text-black">
+                  <a href="mailto:amritavakole@gmail.com" target="_blank" class="text-4xl hover:text-5xl transition-all hover: animate-wiggle">
+                    <i class="fa-solid fa-at"></i>
+                  </a>
+                </div>
+                <h2 class="title-font font-medium text-1xl ">amritavakole@gmail.com</h2>
+                <p class="leading-relaxed">You can email me about any issue.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>
+
+
+
+<!--                              FOOTER section                       -->
+  <footer class="body-font bg-purple-200 dark:bg-gray-800 dark:text-white">
+    <div class="custom-card-nav container px-40 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <p class="text-sm  sm:ml-4 sm:pl-4 sm:items-center">© 2023
+        <a href="https://twitter.com/itsawme" class='ml-1 sm:items-center' rel="noopener noreferrer" target="_blank">@itsawme</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="inline-flex ml-3  text-2xl hover:scale-125 transition-all hover:text-indigo-500" href="https://github.com/awmie" target="_blank">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a class="inline-flex ml-3  text-2xl hover:scale-125 transition-all hover:text-indigo-500" href="https://twitter.com/itsawme" target="_blank">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a class="inline-flex ml-3  text-2xl hover:scale-125 transition-all hover:text-indigo-500" href="https://www.instagram.com/awmeyyyie/" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a class="inline-flex ml-3  text-2xl hover:scale-125 transition-all hover:text-indigo-500" href="https://www.linkedin.com/in/amritava-kole-521bb0229/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </span>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+<button id="to-top-button" onclick="goToTop()"
+  class="hidden fixed z-90 bottom-8 right-8 border-0 w-10 h-10 rounded-full drop-shadow-md bg-indigo-500  text-xl font-bold 
+   transition-all hover:scale-110 hover:text-2xl hover:text-indigo-500 hover:bg-white text-white"
+  >&uarr;</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
