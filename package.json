@@ -2,7 +2,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "tailwind": "npx tailwind -i ./src/input.css -o ./src/output.css --watch",
+    "tailwind": "npx tailwind -i ./src/input.css -o ./build/css/output.css --watch",
     "prettier": "npx prettier --write ./build/*.html"
   },
   "devDependencies": {
@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "next-themes": "^0.2.1",
+    "taos": "^1.0.5",
     "vite": "^4.1.1"
   }
 }
