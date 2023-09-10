@@ -10,7 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
     <script src="https://kit.fontawesome.com/354d48ccb6.js" crossorigin="anonymous"></script>
 
     <title>Amritava Kole</title>
@@ -48,51 +47,7 @@
       </div>
     </div>
 </section>
-<script>
-  //name appear
-  let name = new SplitType('#name');
-  let characters = document.querySelectorAll('.char');
-
-  for(i=0; i<characters.length; i++){
-    characters[i].classList.add('translate-y-32')
-  }
-
-  gsap.to('.char',{
-    y: 0,
-    stagger: 0.05,
-    delay: 0.02,
-    duration: 1
-  });
-
-  gsap.registerPlugin(TextPlugin);
-  gsap.fromTo('#cursor', {
-  autoAlpha: 0,
-  x: -10
-}, {
-  autoAlpha: 1,
-  duration: 1,
-  repeat: -1,
-  ease: SteppedEase.config(1)
-});
-
-let textElement = document.querySelector("#text"); // Get the text element
-let cursorElement = document.querySelector("#cursor"); // Get the cursor element
-
-let tween = gsap.to(textElement, {
-  text: {
-    value: "I am a fourth-year computer science student at Gautam Buddha University in Greater Noida. My current research interests include Machine Learning, Artificial Intelligence, and Python programming."
-  },
-  duration: 10,
-  delay: 2,
-  ease: 'none',
-  onUpdate: () => {
-    // Append the cursor to the text being animated
-    textElement.appendChild(cursorElement);
-  }
-});
-document.querySelector('#text').onclick = () => tween.restart()
-
-</script>
+<script src="js/introanim.js"></script>
 
 <div class="toggle-dark flex items-center justify-center w-full mb-12">
   
@@ -309,7 +264,7 @@ document.querySelector('#text').onclick = () => tween.restart()
           <a class="inline-flex ml-3  text-3xl hover:scale-110 transition-all hover:text-indigo-500" href="https://twitter.com/itsawme" target="_blank">
             <i class="fa-brands fa-twitter"></i>
           </a>
-          <a class="inline-flex ml-3  text-3xl hover:scale-110 transition-all hover:text-indigo-500" href="https://www.instagram.com/awmeyyyie/" target="_blank">
+          <a class="inline-flex ml-3  text-3xl hover:scale-110 transition-all hover:text-indigo-500" href="https://www.instagram.com/oyi.zoro/" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a class="inline-flex ml-3  text-3xl hover:scale-110 transition-all hover:text-indigo-500" href="https://www.linkedin.com/in/amritava-kole-521bb0229/" target="_blank">
@@ -332,155 +287,6 @@ document.querySelector('#text').onclick = () => tween.restart()
 </button>
 
 <script src="js/main.js"></script>
-<script>
-  //gsap animation 1
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: ['#animate', '#skillcard1', '#skillcard2', '#skillcard3'],
-      start: 'top 35%',
-      end: 'bottom 5%',
-      scrub: false,
-      markers: false,
-      // toggleActions: 'play reverse',
-    }
-  })
-  tl.from('#animate', {
-    y: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  tl.from('#skillcard1', {
-    x: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-  tl.from('#skillcard3', {
-    x: 10,
-    opacity: 0,
-    duration: 0.4,
-  })
-  tl.from('#skillcard2', {
-    y: 10,
-    opacity: 0,
-    duration: 0.4,
-  })
-  //gsap animation 2
-  let tl2 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ['#animate2'],
-      start: 'top 35%',
-      end: 'bottom 5%',
-      scrub: false,
-      markers: false,
-      // toggleActions: 'play reverse play reverse',
-    }
-  })
-  tl2.from('#animate2', {
-    y: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-  tl2.from('#skillcard4', {
-    x: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-  tl2.from('#skillcard6', {
-    x: 10,
-    opacity: 0,
-    duration: 0.4,
-  })
-  tl2.from('#skillcard5', {
-    y: 10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  //gsap animation 3
-  let tl3 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ['#animate3','#skillcard7', '#skillcard8', '#skillcard9', '#skillcard10'],
-      start: 'top 30%',
-      end: 'bottom 5%',
-      scrub: false,
-      markers: false,
-      // toggleActions: 'play reverse play reverse',
-    }
-  })
-  tl3.from('#animate3', {
-    y: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  tl3.from('#skillcard7', {
-    x: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  tl3.from('#skillcard9', {
-    x: 10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  tl3.from('#skillcard8', {
-    y: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  tl3.from('#skillcard10', {
-    y: 10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  //gsap animation 4
-  let tl4 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ['#animate4', 'skillcard11', 'skillcard12'],
-      start: 'top 60%',
-      end: 'bottom 0%',
-      scrub: false,
-      markers: false,
-      toggleActions: 'play reverse play reverse',
-    }
-  })
-
-  tl4.from('#animate4', {
-    y: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  tl4.from('#skillcard11', {
-    x: -10,
-    opacity: 0,
-    duration: 0.4,
-  })
-  tl4.from('#skillcard12', {
-    x: 10,
-    opacity: 0,
-    duration: 0.4,
-  })
-
-  
-  //smooth scroll
-  const lenis = new Lenis()
-
-  lenis.on('scroll', (e) => {
-    console.log(e)
-  })
-
-  function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
-</script>
+<script src="js/anim.js"></script>
 </body>
 </html>
