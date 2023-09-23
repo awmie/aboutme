@@ -28,7 +28,7 @@
     duration: 1
     });
 
-const words = ["a Frontend Developer;", "a Python Developer;", "also interested in Machine Learning;"]
+const words = [" a Frontend Developer;", " a Python Developer;", " also interested in Machine Learning;"]
 
 let cursor = gsap.to('.cursor', {opacity:0, ease: "power2.inOut", repeat:-1})
 let masterTl = gsap.timeline({repeat: -1}).pause()
