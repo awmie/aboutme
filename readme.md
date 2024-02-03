@@ -8,5 +8,7 @@
 - CSS (tailwind)
 - JS
 - Gsap
+- Google fonts
+- Special thanks to - [Vincent Garreau](https://github.com/VincentGarreau/particles.js) for particles.js
 
-© 2023 [@itsawme](https://twitter.com/itsawme)
+© 2024 [@itsawme](https://twitter.com/itsawme)

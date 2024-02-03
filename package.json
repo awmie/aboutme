@@ -1,4 +1,5 @@
-{
+{ 
+  "type": "module",
   "scripts": {
     "start": "vite",
     "build": "vite build",
@@ -14,6 +15,6 @@
   "dependencies": {
     "next-themes": "^0.2.1",
     "taos": "^1.0.5",
-    "vite": "^4.1.1"
+    "vite": "^4.5.2"
   }
 }

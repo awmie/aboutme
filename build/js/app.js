@@ -1,35 +1,33 @@
-/* ---- particles.js config ---- */
 
 particlesJS("particles-js", {
   "particles": {
     "number": {
-      "value": 100,
+      "value": 202,
       "density": {
         "enable": true,
-        "value_area":1000
+        "value_area": 1122.388442605866
       }
     },
     "color": {
-      "value": ["#aa73ff", "#f8c210", "#83d238", "#33b1f8"]
+      "value": "#a855f7"
     },
-    
     "shape": {
-      "type": "circle",
+      "type": "edge",
       "stroke": {
         "width": 0,
-        "color": "#fff"
+        "color": "#000000"
       },
       "polygon": {
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
+        "src": "https://cdn.discordapp.com/attachments/1126359222712541184/1203288769193713725/IMG_1246.JPG?ex=65d08cfe&is=65be17fe&hm=6fb446281c7817772c62bd91c41d35c3dc3edc5e3aff5cf5a4c705b76eabdbe4&",
         "width": 100,
         "height": 100
       }
     },
     "opacity": {
-      "value": 0.6,
+      "value": 0.5,
       "random": false,
       "anim": {
         "enable": false,
@@ -39,51 +37,66 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 2,
+      "value": 3,
       "random": true,
       "anim": {
-        "enable": false,
+        "enable": true,
         "speed": 40,
         "size_min": 0.1,
         "sync": false
       }
     },
     "line_linked": {
-      "enable": true,
-      "distance": 120,
-      "color": "#a855f7",
+      "enable": false,
+      "distance": 150,
+      "color": "#ffffff",
       "opacity": 0.4,
       "width": 1
     },
+    "move": {
+      "enable": true,
+      "speed": 1.9,
+      "direction": "top",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
   },
   "interactivity": {
     "detect_on": "canvas",
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "grab"
+        "mode": "bubble"
       },
       "onclick": {
-        "enable": false
+        "enable": true,
+        "mode": "push"
       },
       "resize": true
     },
     "modes": {
       "grab": {
-        "distance": 140,
+        "distance": 95.90409590409591,
         "line_linked": {
           "opacity": 1
         }
       },
       "bubble": {
-        "distance": 400,
-        "size": 40,
-        "duration": 2,
-        "opacity": 8,
+        "distance": 116,
+        "size": 7,
+        "duration": 2.3976023976023977,
+        "opacity": 0.3756243756243756,
         "speed": 3
       },
       "repulse": {
-        "distance": 200,
+        "distance": 211.12807353753223,
         "duration": 0.4
       },
       "push": {

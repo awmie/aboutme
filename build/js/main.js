@@ -1,10 +1,12 @@
 
-//darkmode toggle
-const darkToggle = document.querySelector('.toggle-dark');
-darkToggle.addEventListener('click', (event) =>{
-  event.preventDefault();
-  document.documentElement.classList.toggle('dark');
-})
+// //darkmode toggle
+// const darkToggle = document.querySelector('.toggle-dark');
+// darkToggle.addEventListener('click', (event) =>{
+//     event.preventDefault();
+//     document.documentElement.classList.toggle('dark');
+//     let isDark = document.documentElement.classList.contains('dark');
+//     console.log(isDark);
+// })
 
 
 //top-up-button
@@ -23,3 +25,4 @@ window.onscroll = function () {
 function goToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
