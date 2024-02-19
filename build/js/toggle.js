@@ -5,7 +5,7 @@ const isDark = function(){ return document.documentElement.classList.contains('d
 darkToggle.addEventListener('click', (event) =>{
     event.preventDefault();
     document.documentElement.classList.toggle('dark');
-    console.log(isDark());
+    // console.log(isDark());
     particlesJS("particles-js", {
         "particles": {
           "number": {
