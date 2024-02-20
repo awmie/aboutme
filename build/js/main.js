@@ -1,14 +1,3 @@
-
-// //darkmode toggle
-// const darkToggle = document.querySelector('.toggle-dark');
-// darkToggle.addEventListener('click', (event) =>{
-//     event.preventDefault();
-//     document.documentElement.classList.toggle('dark');
-//     let isDark = document.documentElement.classList.contains('dark');
-//     console.log(isDark);
-// })
-
-
 //top-up-button
 let toTopButton = document.getElementById("to-top-button");
 
@@ -25,4 +14,23 @@ window.onscroll = function () {
 function goToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+const cursorDot = document.querySelector('[data-cursor-dot]');
+const cursorOutline = document.querySelector('[data-cursor-outline]');
+
+window.addEventListener('mousemove', (e) => {
+
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    cursorDot.style.top = `${posY}px`;
+    cursorDot.style.left = `${posX}px`;
+
+    cursorOutline.animate({
+        left: `${posX}px`,
+        top: `${posY}px`
+    }, {duration: 500, fill: 'forwards'});
+
+});
+
 

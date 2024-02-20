@@ -34,3 +34,50 @@ input:checked ~ .dot {
     width: 100%;
     height: 100%;
   }
+
+  :root {
+    --cursor-color: blueviolet; /* Initial cursor color */
+  }
+
+  .cursor-dot {
+    width: 15px; /* Adjust width for desired square size */
+    height: 15px; /* Same width as height for square */
+    background-color: var(--cursor-color);
+    /* Force anti-aliasing to be turned off */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .cursor-outline {
+    width: 30px; /* Adjust width for desired outline size */
+    height: 30px; /* Same width as height for square outline */
+    border: 2px solid var(--cursor-color);
+    /* Force anti-aliasing to be turned off */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .cursor-dot,
+  .cursor-outline {
+    opacity: 0.5;
+    position: fixed;
+    top: 50%; /* Position at center of screen */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Fine-tune positioning */
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+/* Apply cursor effects to links only */
+*{
+  cursor: none; /* Hide default cursor */
+}
+
+
+

@@ -24,7 +24,12 @@
 </head>
 
 <body class="antialiased bg-body text-black leading-relaxed bg-teal-100 dark:bg-black dark:text-white dark:bg-none">
+<!-- cursors -->
+  <div class="cursor-dot" data-cursor-dot></div>
+  <div class="cursor-outline" data-cursor-outline></div>
+<!-- cursors -->
   <div id='particles-js'></div>
+
   <script src="js/particles.js"></script>
   <script type="module" src="js/app.js"></script>
   <header id="home" class='custom-card-nav'>
@@ -38,13 +43,13 @@
       </a>
       <nav style="font-family: 'VT323', monospace;"
         class="bg-teal-100 md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-teal-600 md:dark:border-violet-500	flex flex-wrap items-center text-base justify-center dark:bg-black dark:text-white">
-        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500 cursor-pointer hover:scale-110 transition-all ease-in-out"
+        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500  hover:scale-110 transition-all ease-in-out"
           href="#experience">Experience</a>
-        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500 cursor-pointer hover:scale-110 transition-all ease-in-out"
+        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500  hover:scale-110 transition-all ease-in-out"
           href="#skills">Skills</a>
-        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500 cursor-pointer hover:scale-110 transition-all ease-in-out"
+        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500  hover:scale-110 transition-all ease-in-out"
           href="https://cdn.discordapp.com/attachments/1126359222712541184/1149933456227303516/Resume.pdf">CV</a>
-        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500 cursor-pointer hover:scale-110 transition-all ease-in-out"
+        <a class="mr-5 hover:text-teal-600 hover:dark:text-violet-500  hover:scale-110 transition-all ease-in-out"
           href="#contact">Contact</a>
       </nav>
     </div>
@@ -53,13 +58,13 @@
   <section class="body-font" style="font-family: 'VT323', monospace;">
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
       <div class="text-center lg:w-2/3 w-full">
-        <h1 id='name' style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
-          class="text-teal-600 title-font sm:text-8xl text-6xl mb-4 font-medium  dark:text-violet-500">Amritava Kole
-        </h1>
+        <p id='name' style="clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)"
+          class="text-teal-600 title-font sm:text-8xl text-6xl mb-4 font-medium  dark:text-violet-500">
+          Amritava Kole
+        </p>
         <p id="hi" style="font-family: 'VT323'; clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)" class="text-xl">
-          Hi, I'm
-          <span class="text cursor">_</span>
-          <!-- <span class="cursor" >_</span> -->
+          Hi, I'm <span class="text"></span> 
+            <span class="cursor">_</span>
         </p>
         <div class="flex mt-6 justify-center">
           <div class="bg-teal-600 w-10 h-1 rounded-full dark:bg-purple-400 inline-flex"></div>
@@ -75,15 +80,18 @@
       <!-- toggle -->
       <div class="relative text-7xl md:5xl text-center dark:text-violet-500 text-black ">
         <a
-          class="inline-flex ml-3  text-3xl hover:scale-110 transition-all hover:text-teal-600 hover:dark:text-violet-400 cursor-pointer">
+          class="inline-flex ml-3  text-3xl hover:scale-110 transition-all hover:text-teal-600 hover:dark:text-violet-400 ">
           <i class="toggle-dark fa-solid fa-fingerprint"></i>
         </a>
         <div class='text-base dark:text-white text-black' style="font-family: 'VT323', monospace;">
-          <br>"Darkmode is always better, don't put your finger there!"
           <br>
-          <i class="text-teal-600 dark:text-violet-300" style="font-family: 'Ubuntu Mono', monospace;">
+          <p>
+            "Darkmode is always better, don't put your finger there!"
+          </p>
+          <br>
+          <p class="text-teal-600 dark:text-violet-300" style="font-family: 'Ubuntu Mono', monospace;">
             ~awme
-          </i>
+          </p>
         </div>
       </div>
     </label>
@@ -113,7 +121,7 @@
               class="flex items-center text-gray-800 hover:text-teal-600 dark:text-violet-500 mb-2 hover:dark:text-violet-200">
               <a class="hover:animate-pulse" href="https://www.hackerrank.com/amritavakole" target="_blank">
                 <i class="fa-brands fa-hackerrank"></i>
-                <span class="ml-2"> Hackerrank: Silver level 
+                <span class="ml-2"> Hackerrank: Silver level
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -189,7 +197,8 @@
             </p>
             <p
               class="flex items-center text-gray-800 hover:text-teal-600 dark:text-violet-500 mb-2 hover:dark:text-violet-200">
-              <a class="hover:animate-pulse" href="https://github.com/awmie/onlineFraud/blob/main/fraud.ipynb" target="_blank">
+              <a class="hover:animate-pulse" href="https://github.com/awmie/onlineFraud/blob/main/fraud.ipynb"
+                target="_blank">
                 <i class="fa-solid fa-code-branch"></i>
                 <span class="ml-2">Fraud Detection using different python models</span>
               </a>
@@ -198,6 +207,7 @@
           </div>
         </div>
       </div>
+    </div>
   </section>
 
   <!--                              PORTFOLIO SECTION                       -->

@@ -1,3 +1,18 @@
+//cursor dark
+
+// Function to update cursor color based on a condition (e.g., dark mode toggle)
+function updateCursorColor(newColor) {
+  document.documentElement.style.setProperty('--cursor-color', newColor);
+}
+
+// Example: Change cursor color when clicking a button
+const changeCursorButton = document.querySelector('.toggle-dark');
+changeCursorButton.addEventListener('click', () => {
+  const newColor = isDark() ? 'black' : 'blueviolet'; // Adjust conditions based on your dark mode detection
+  updateCursorColor(newColor);
+});
+
+
 
 //darkmode toggle
 const darkToggle = document.querySelector('.toggle-dark');
