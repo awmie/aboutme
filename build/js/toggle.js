@@ -8,7 +8,7 @@ function updateCursorColor(newColor) {
 // Example: Change cursor color when clicking a button
 const changeCursorButton = document.querySelector('.toggle-dark');
 changeCursorButton.addEventListener('click', () => {
-  const newColor = isDark() ? 'black' : 'blueviolet'; // Adjust conditions based on your dark mode detection
+  const newColor = isDark() ? 'blue' : 'blueviolet'; // Adjust conditions based on your dark mode detection
   updateCursorColor(newColor);
 });
 
@@ -31,7 +31,7 @@ darkToggle.addEventListener('click', (event) =>{
             }
           },
           "color": {
-            "value": isDark() ? "#a855f7" : "#000"
+            "value": isDark() ? "#a855f7" : "2563EB"
           },
           "shape": {
             "type": "edge",

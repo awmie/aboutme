@@ -3,81 +3,99 @@
 @tailwind utilities;
 
 input:checked ~ .dot {
-    transform: translateX(100%);
-    background-color: white;
-  }
+  transform: translateX(100%);
+  background-color: white;
+}
 
 .custom-card {
-    @apply h-full p-6 rounded-lg border-2
-    border-teal-600 dark:border-gray-900 
+  @apply h-full p-6  border-2
+    border-blue-300 dark:border-gray-900 
     backdrop-blur-xs flex flex-col relative overflow-hidden transition-all 
     hover:scale-105
     hover:dark:border-purple-300 hover:dark:shadow-[0_0_20px_theme('colors.indigo.400')]
-    hover:border-teal-400 hover:shadow-[0_0_20px_theme('colors.teal.400')];
-  }
+    hover:border-blue-400 hover:shadow-[0_0_20px_theme('colors.blue.400')];
+}
 .custom-card-nav {
   @apply h-full p-2 rounded-3xl border-2 border-none backdrop-blur-xs flex flex-col relative overflow-hidden;
 }
 
-  .scene-container {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
+.scene-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
 
-  #particles-js{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 
-  :root {
-    --cursor-color: blueviolet; /* Initial cursor color */
-  }
+:root {
+  --cursor-color: blueviolet; /* Initial cursor color */
+}
 
-  .cursor-dot {
-    width: 15px; /* Adjust width for desired square size */
-    height: 15px; /* Same width as height for square */
-    background-color: var(--cursor-color);
-    /* Force anti-aliasing to be turned off */
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  
-  .cursor-outline {
-    width: 30px; /* Adjust width for desired outline size */
-    height: 30px; /* Same width as height for square outline */
-    border: 2px solid var(--cursor-color);
-    /* Force anti-aliasing to be turned off */
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  
-  .cursor-dot,
-  .cursor-outline {
-    opacity: 0.5;
-    position: fixed;
-    top: 50%; /* Position at center of screen */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Fine-tune positioning */
-    pointer-events: none;
-    z-index: 1;
-  }
-  
+.cursor-dot {
+  width: 13px; /* Adjust width for desired square size */
+  height: 13px; /* Same width as height for square */
+  background-color: var(--cursor-color);
+  /* Force anti-aliasing to be turned off */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.cursor-outline {
+  width: 20px; /* Adjust width for desired outline size */
+  height: 20px; /* Same width as height for square outline */
+  border: 2px solid var(--cursor-color);
+  /* Force anti-aliasing to be turned off */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.cursor-dot,
+.cursor-outline {
+  opacity: 0.8;
+  position: fixed;
+  top: 50%; /* Position at center of screen */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Fine-tune positioning */
+  pointer-events: none;
+  z-index: 1;
+}
+
 /* Apply cursor effects to links only */
-*{
+* {
   cursor: none; /* Hide default cursor */
 }
 
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid blueviolet;
+  animation: loader 2s infinite ease;
+}

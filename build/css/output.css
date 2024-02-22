@@ -747,14 +747,19 @@ video {
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-teal-100 {
+.bg-blue-100 {
   --tw-bg-opacity: 1;
-  background-color: rgb(204 251 241 / var(--tw-bg-opacity));
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
 }
 
-.bg-teal-600 {
+.bg-blue-200 {
   --tw-bg-opacity: 1;
-  background-color: rgb(13 148 136 / var(--tw-bg-opacity));
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
+}
+
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .p-3 {
@@ -866,14 +871,14 @@ video {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-blue-600 {
+  --tw-text-opacity: 1;
+  color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
-}
-
-.text-teal-600 {
-  --tw-text-opacity: 1;
-  color: rgb(13 148 136 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -912,10 +917,9 @@ input:checked ~ .dot {
   height: 100%;
   flex-direction: column;
   overflow: hidden;
-  border-radius: 0.5rem;
   border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: rgb(13 148 136 / var(--tw-border-opacity));
+  border-color: rgb(147 197 253 / var(--tw-border-opacity));
   padding: 1.5rem;
   --tw-backdrop-blur: blur(2px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -930,8 +934,8 @@ input:checked ~ .dot {
   --tw-scale-y: 1.05;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   --tw-border-opacity: 1;
-  border-color: rgb(45 212 191 / var(--tw-border-opacity));
-  --tw-shadow: 0 0 20px #2dd4bf;
+  border-color: rgb(96 165 250 / var(--tw-border-opacity));
+  --tw-shadow: 0 0 20px #60a5fa;
   --tw-shadow-colored: 0 0 20px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
@@ -972,7 +976,7 @@ input:checked ~ .dot {
   left: 0;
 }
 
-#particles-js{
+#particles-js {
   position: fixed;
   top: 0;
   left: 0;
@@ -986,9 +990,9 @@ input:checked ~ .dot {
 }
 
 .cursor-dot {
-  width: 15px;
+  width: 13px;
   /* Adjust width for desired square size */
-  height: 15px;
+  height: 13px;
   /* Same width as height for square */
   background-color: var(--cursor-color);
   /* Force anti-aliasing to be turned off */
@@ -996,9 +1000,9 @@ input:checked ~ .dot {
 }
 
 .cursor-outline {
-  width: 30px;
+  width: 20px;
   /* Adjust width for desired outline size */
-  height: 30px;
+  height: 20px;
   /* Same width as height for square outline */
   border: 2px solid var(--cursor-color);
   /* Force anti-aliasing to be turned off */
@@ -1006,8 +1010,8 @@ input:checked ~ .dot {
 }
 
 .cursor-dot,
-  .cursor-outline {
-  opacity: 0.5;
+.cursor-outline {
+  opacity: 0.8;
   position: fixed;
   top: 50%;
   /* Position at center of screen */
@@ -1020,9 +1024,30 @@ input:checked ~ .dot {
 
 /* Apply cursor effects to links only */
 
-*{
+* {
   cursor: none;
   /* Hide default cursor */
+}
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid blueviolet;
+  animation: loader 2s infinite ease;
 }
 
 .hover\:scale-110:hover {
@@ -1056,9 +1081,9 @@ input:checked ~ .dot {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.hover\:text-teal-600:hover {
+.hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
-  color: rgb(13 148 136 / var(--tw-text-opacity));
+  color: rgb(37 99 235 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:bg-black) {
@@ -1199,9 +1224,9 @@ input:checked ~ .dot {
     border-left-width: 1px;
   }
 
-  .md\:border-teal-600 {
+  .md\:border-blue-600 {
     --tw-border-opacity: 1;
-    border-color: rgb(13 148 136 / var(--tw-border-opacity));
+    border-color: rgb(37 99 235 / var(--tw-border-opacity));
   }
 
   .md\:py-1 {
@@ -1230,6 +1255,3 @@ input:checked ~ .dot {
     width: 33.333333%;
   }
 }
-
-
-

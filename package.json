@@ -23,5 +23,6 @@
   "version": "1.0.0",
   "main": "tailwind.config.js",
   "author": "awmie",
-  "license": "ISC"
+  "license": "ISC",
+  "keywords": []
 }
