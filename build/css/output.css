@@ -1115,26 +1115,9 @@ input:checked ~ .dot {
   background-color: rgb(139 92 246 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:bg-violet-400) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(167 139 250 / var(--tw-bg-opacity));
-}
-
 :is(.dark .dark\:bg-violet-600) {
   --tw-bg-opacity: 1;
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
-}
-
-:is(.dark .dark\:bg-opacity-25) {
-  --tw-bg-opacity: 0.25;
-}
-
-:is(.dark .dark\:bg-opacity-5) {
-  --tw-bg-opacity: 0.05;
-}
-
-:is(.dark .dark\:bg-opacity-10) {
-  --tw-bg-opacity: 0.1;
 }
 
 :is(.dark .dark\:bg-opacity-15) {
