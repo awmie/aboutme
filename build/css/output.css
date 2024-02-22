@@ -902,6 +902,20 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -941,8 +955,8 @@ input:checked ~ .dot {
 }
 
 :is(.dark .custom-card) {
-  --tw-border-opacity: 1;
-  border-color: rgb(17 24 39 / var(--tw-border-opacity));
+  border-color: rgb(216 180 254 / var(--tw-border-opacity));
+  --tw-border-opacity: 0.3;
 }
 
 :is(.dark .custom-card):hover {
@@ -1024,7 +1038,7 @@ input:checked ~ .dot {
 
 /* Apply cursor effects to links only */
 
-* {
+*, .to-top-button {
   cursor: none;
   /* Hide default cursor */
 }
@@ -1076,11 +1090,6 @@ input:checked ~ .dot {
   line-height: 2rem;
 }
 
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
 .hover\:text-blue-600:hover {
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
@@ -1104,6 +1113,32 @@ input:checked ~ .dot {
 :is(.dark .dark\:bg-violet-500) {
   --tw-bg-opacity: 1;
   background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-violet-400) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(167 139 250 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-violet-600) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 58 237 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-opacity-25) {
+  --tw-bg-opacity: 0.25;
+}
+
+:is(.dark .dark\:bg-opacity-5) {
+  --tw-bg-opacity: 0.05;
+}
+
+:is(.dark .dark\:bg-opacity-10) {
+  --tw-bg-opacity: 0.1;
+}
+
+:is(.dark .dark\:bg-opacity-15) {
+  --tw-bg-opacity: 0.15;
 }
 
 :is(.dark .dark\:bg-none) {
