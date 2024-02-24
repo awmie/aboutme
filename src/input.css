@@ -9,7 +9,7 @@ input:checked ~ .dot {
 
 .custom-card {
   @apply h-full p-6  border-2
-    border-blue-300 dark:border-purple-300 dark:border-opacity-30
+    border-blue-300 bg-blue-300 bg-opacity-10 dark:border-purple-300 dark:border-opacity-30 dark:bg-purple-600 dark:bg-opacity-10
     backdrop-blur-xs flex flex-col relative overflow-hidden transition-all 
     hover:scale-105
     hover:dark:border-purple-300 hover:dark:shadow-[0_0_20px_theme('colors.indigo.400')]
