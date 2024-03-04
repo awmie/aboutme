@@ -1,15 +1,15 @@
 
-particlesJS("particles-js", {
+particlesJS("particles-js",{
   "particles": {
     "number": {
-      "value": 202,
+      "value": 111,
       "density": {
         "enable": true,
-        "value_area": 1122.388442605866
+        "value_area": 800
       }
     },
     "color": {
-      "value": "#a855f7"
+      "value": "#7F00FF"
     },
     "shape": {
       "type": "edge",
@@ -21,14 +21,14 @@ particlesJS("particles-js", {
         "nb_sides": 5
       },
       "image": {
-        "src": "https://cdn.discordapp.com/attachments/1126359222712541184/1203288769193713725/IMG_1246.JPG?ex=65d08cfe&is=65be17fe&hm=6fb446281c7817772c62bd91c41d35c3dc3edc5e3aff5cf5a4c705b76eabdbe4&",
+        "src": "img/github.svg",
         "width": 100,
         "height": 100
       }
     },
     "opacity": {
       "value": 0.5,
-      "random": false,
+      "random": true,
       "anim": {
         "enable": false,
         "speed": 1,
@@ -37,10 +37,10 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 3,
+      "value": 10,
       "random": true,
       "anim": {
-        "enable": true,
+        "enable": false,
         "speed": 40,
         "size_min": 0.1,
         "sync": false
@@ -48,15 +48,15 @@ particlesJS("particles-js", {
     },
     "line_linked": {
       "enable": false,
-      "distance": 150,
+      "distance": 500,
       "color": "#ffffff",
       "opacity": 0.4,
-      "width": 1
+      "width": 2
     },
     "move": {
       "enable": true,
-      "speed": 1.9,
-      "direction": "top",
+      "speed": 6,
+      "direction": "top-right",
       "random": false,
       "straight": false,
       "out_mode": "out",
@@ -83,20 +83,20 @@ particlesJS("particles-js", {
     },
     "modes": {
       "grab": {
-        "distance": 95.90409590409591,
+        "distance": 400,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.5
         }
       },
       "bubble": {
-        "distance": 116,
-        "size": 7,
-        "duration": 2.3976023976023977,
-        "opacity": 0.3756243756243756,
+        "distance": 400,
+        "size": 4,
+        "duration": 0.3,
+        "opacity": 1,
         "speed": 3
       },
       "repulse": {
-        "distance": 211.12807353753223,
+        "distance": 200,
         "duration": 0.4
       },
       "push": {

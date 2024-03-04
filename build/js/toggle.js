@@ -1,17 +1,20 @@
-//cursor dark
-
 // Function to update cursor color based on a condition (e.g., dark mode toggle)
 function updateCursorColor(newColor) {
   document.documentElement.style.setProperty('--cursor-color', newColor);
 }
 
+function updateKeyColor(newColor) {
+  document.documentElement.style.setProperty('--key-color', newColor);
+}
+
 // Example: Change cursor color when clicking a button
 const changeCursorButton = document.querySelector('.toggle-dark');
 changeCursorButton.addEventListener('click', () => {
-  const newColor = isDark() ? 'blue' : 'blueviolet'; // Adjust conditions based on your dark mode detection
+  const newColor = isDark() ? 'blue' : '#a78bfa'; // Adjust conditions based on your dark mode detection
+  const newKeyColor = isDark() ? 'black' : 'wheat';
   updateCursorColor(newColor);
+  updateKeyColor(newKeyColor);
 });
-
 
 
 //darkmode toggle
@@ -20,18 +23,19 @@ const isDark = function () { return document.documentElement.classList.contains(
 darkToggle.addEventListener('click', (event) => {
   event.preventDefault();
   document.documentElement.classList.toggle('dark');
+  const valueChecker = isDark() ? "#a855f7" : "2563EB";
   // console.log(isDark());
-  particlesJS("particles-js", {
+particlesJS("particles-js",{
     "particles": {
       "number": {
-        "value": 202,
+        "value": 111,
         "density": {
           "enable": true,
-          "value_area": 1122.388442605866
+          "value_area": 800
         }
       },
       "color": {
-        "value": isDark() ? "#a855f7" : "2563EB"
+        "value": valueChecker
       },
       "shape": {
         "type": "edge",
@@ -43,14 +47,14 @@ darkToggle.addEventListener('click', (event) => {
           "nb_sides": 5
         },
         "image": {
-          "src": "https://cdn.discordapp.com/attachments/1126359222712541184/1203288769193713725/IMG_1246.JPG?ex=65d08cfe&is=65be17fe&hm=6fb446281c7817772c62bd91c41d35c3dc3edc5e3aff5cf5a4c705b76eabdbe4&",
+          "src": "img/github.svg",
           "width": 100,
           "height": 100
         }
       },
       "opacity": {
         "value": 0.5,
-        "random": false,
+        "random": true,
         "anim": {
           "enable": false,
           "speed": 1,
@@ -59,10 +63,10 @@ darkToggle.addEventListener('click', (event) => {
         }
       },
       "size": {
-        "value": 3,
+        "value": 10,
         "random": true,
         "anim": {
-          "enable": true,
+          "enable": false,
           "speed": 40,
           "size_min": 0.1,
           "sync": false
@@ -70,15 +74,15 @@ darkToggle.addEventListener('click', (event) => {
       },
       "line_linked": {
         "enable": false,
-        "distance": 150,
+        "distance": 500,
         "color": "#ffffff",
         "opacity": 0.4,
-        "width": 1
+        "width": 2
       },
       "move": {
         "enable": true,
-        "speed": 1.9,
-        "direction": "top",
+        "speed": 6,
+        "direction": "top-right",
         "random": false,
         "straight": false,
         "out_mode": "out",
@@ -105,20 +109,20 @@ darkToggle.addEventListener('click', (event) => {
       },
       "modes": {
         "grab": {
-          "distance": 95.90409590409591,
+          "distance": 400,
           "line_linked": {
-            "opacity": 1
+            "opacity": 0.5
           }
         },
         "bubble": {
-          "distance": 116,
-          "size": 7,
-          "duration": 2.3976023976023977,
-          "opacity": 0.3756243756243756,
+          "distance": 400,
+          "size": 4,
+          "duration": 0.3,
+          "opacity": 1,
           "speed": 3
         },
         "repulse": {
-          "distance": 211.12807353753223,
+          "distance": 200,
           "duration": 0.4
         },
         "push": {

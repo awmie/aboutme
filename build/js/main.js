@@ -33,3 +33,24 @@ window.addEventListener('mousemove', (e) => {
 
 });
 
+// boing bounce 
+
+document.querySelectorAll(".name") 
+.forEach((element) => { 
+    element.addEventListener("mouseover",  
+                             (e) => bounce(e.target)); 
+}); 
+
+function bounce(letter) { 
+    if (!letter.classList.contains("bounce")) { 
+        letter.classList.add("bounce"); 
+        setTimeout( 
+            function () { 
+                letter.classList.remove("bounce"); 
+            }, 
+            1000 
+        ); 
+    } 
+} 
+
+

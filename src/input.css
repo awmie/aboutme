@@ -36,7 +36,8 @@ input:checked ~ .dot {
 }
 
 :root {
-  --cursor-color: blueviolet; /* Initial cursor color */
+  --cursor-color: #a78bfa; /* Initial cursor color */
+  --key-color:#f5deb3;
 }
 
 .cursor-dot {
@@ -75,7 +76,8 @@ input:checked ~ .dot {
 }
 
 /* Apply cursor effects to links only */
-*, .to-top-button {
+*,
+.to-top-button {
   cursor: none; /* Hide default cursor */
 }
 
@@ -98,4 +100,68 @@ input:checked ~ .dot {
   position: relative;
   border: 4px solid blueviolet;
   animation: loader 2s infinite ease;
+}
+
+/* ------floating---------- */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* jumping name keys */
+#name span {
+  animation-timing-function: ease-in-out; /* Adjust for desired jump feel */
+  animation-duration: 0.5s; /* Adjust duration as needed */
+  animation-iteration-count: 1;
+  display: inline-block;
+}
+
+
+#name span:hover {
+  animation-timing-function: ease-in-out; /* Adjust for desired jump feel */
+  animation-duration: 0.5s; /* Adjust duration as needed */
+  animation-iteration-count: 1;
+  display: inline-block;
+  color: var(--key-color);
+  display: inline-block; /* Allow individual jumps */
+  animation: jump 0.5s ease-in-out alternate infinite; /* Adjust timing and behavior */
+  animation-delay: calc(0.1s * (index - 1));
+}
+
+
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust jump height as needed */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background:var(--cursor-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--key-color);
+  /* background: rgb(red, green, #6c94fb); */
+}
+
+.body{
+  scroll-behavior: smooth;
 }
