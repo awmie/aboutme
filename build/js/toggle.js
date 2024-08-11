@@ -10,8 +10,8 @@ function updateKeyColor(newColor) {
 // Example: Change cursor color when clicking a button
 const changeCursorButton = document.querySelector('.toggle-dark');
 changeCursorButton.addEventListener('click', () => {
-  const newColor = isDark() ? 'blue' : '#a78bfa'; // Adjust conditions based on your dark mode detection
-  const newKeyColor = isDark() ? 'black' : 'wheat';
+  const newColor = isDark() ? 'blue' : '#ea580c'; // Adjust conditions based on your dark mode detection
+  const newKeyColor = isDark() ? 'black' : '#e13800';
   updateCursorColor(newColor);
   updateKeyColor(newKeyColor);
 });
@@ -23,7 +23,7 @@ const isDark = function () { return document.documentElement.classList.contains(
 darkToggle.addEventListener('click', (event) => {
   event.preventDefault();
   document.documentElement.classList.toggle('dark');
-  const valueChecker = isDark() ? "#a855f7" : "2563EB";
+  const valueChecker = isDark() ? "#ea580c" : "2563EB";
   // console.log(isDark());
 particlesJS("particles-js",{
     "particles": {

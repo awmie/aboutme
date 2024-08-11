@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       textColor: {
-        'wheat': '#f5deb3',
+        'red-orange':'#e13800'
       },
       keyframes: {
         wiggle: {
