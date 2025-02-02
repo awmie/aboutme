@@ -47,7 +47,7 @@ const App = memo(() => {
         >
           <div className="mb-6 md:mb-8">
             <img
-              src="/profile.jpg"
+              src="/assets/profile.jpg"
               alt="Profile"
               className="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-3 md:mb-4 object-cover shadow-[0_4px_12px_rgba(0,0,0,0.2)] dark:shadow-[0_4px_20px_rgba(249,115,22,0.3)] transition-shadow duration-300"
               loading="eager"
