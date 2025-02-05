@@ -1,12 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    font-family: 'Courier Prime', monospace;
+  }
+}
+
 @layer utilities {
   .bg-grid-pattern {
-    background-image: linear-gradient(to right, rgba(255,255,255,.1) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(255,255,255,.1) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(96, 165, 250, 0.1) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(96, 165, 250, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
+  }
+
+  .glass-effect {
+    @apply bg-white/10 dark:bg-black/20;
+    @apply backdrop-blur-xl;
+    @apply border border-black/10 dark:border-white/10;
+  }
+
+  .glass-card {
+    @apply bg-white/10 dark:bg-black/20;
+    @apply backdrop-blur-xl;
+    @apply border border-black/10 dark:border-white/10;
+    @apply hover:border-blue-400/30 dark:hover:border-blue-500/30;
+    @apply shadow-lg shadow-black/5 dark:shadow-white/5;
+    @apply hover:shadow-blue-500/10;
   }
 }
 

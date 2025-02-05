@@ -59,8 +59,8 @@ const Navigation = memo(() => {
                 <div className={`
                   relative z-10 w-3 h-3 rounded-full transition-all duration-300 ease-out
                   ${activeSection === id 
-                    ? 'bg-orange-500 scale-125' 
-                    : 'bg-gray-300 dark:bg-gray-600 group-hover:bg-orange-400'
+                    ? 'bg-blue-500 scale-125' 
+                    : 'bg-gray-300 dark:bg-gray-600 group-hover:bg-blue-400'
                   }
                 `} />
 
@@ -69,7 +69,7 @@ const Navigation = memo(() => {
                   transition-all duration-300 ease-out opacity-0 -translate-x-2 pointer-events-none
                   group-hover:opacity-100 group-hover:translate-x-1
                   ${activeSection === id
-                    ? 'text-orange-500 dark:text-orange-400'
+                    ? 'text-blue-500 dark:text-blue-400'
                     : 'text-gray-600 dark:text-gray-400'
                   }
                 `}>
@@ -82,7 +82,7 @@ const Navigation = memo(() => {
                 `}>
                   <Icon className={`w-4 h-4 ${
                     activeSection === id
-                      ? 'text-orange-500 dark:text-orange-400'
+                      ? 'text-blue-500 dark:text-blue-400'
                       : 'text-gray-600 dark:text-gray-400'
                   }`} />
                 </div>
@@ -101,7 +101,7 @@ const Navigation = memo(() => {
                 onClick={() => scrollToSection(id)}
                 className={`p-2 rounded-full transition-colors duration-300 ${
                   activeSection === id
-                    ? 'text-orange-500 bg-orange-50/50 dark:bg-orange-500/10'
+                    ? 'text-blue-500 bg-blue-50/50 dark:bg-blue-500/10'
                     : 'text-gray-600 dark:text-gray-400'
                 }`}
                 aria-label={label}
