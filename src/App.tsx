@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import { memo } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Youtube, Instagram } from 'lucide-react';
 import { ThemeToggle } from './components/ThemeToggle';

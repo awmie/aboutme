@@ -1,7 +1,7 @@
-import { useState, memo, useEffect, useRef } from 'react';
-import { createPortal } from 'react-dom';
+import { useState, memo, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Video, Code, Briefcase, GithubIcon, Globe, Plug2, Moon, Save, Lock, Music, YoutubeIcon, Sparkles, Shield, Gamepad2, Laptop2, Smartphone, Terminal, Play, Zap, BookOpen } from 'lucide-react';
+
+import { Video, Code, Briefcase, GithubIcon, Globe, Plug2, Moon, Save, Lock, Music, YoutubeIcon, Sparkles, Shield, Gamepad2, Laptop2, Smartphone, Terminal, Zap, BookOpen } from 'lucide-react';
 import PremierePro from '../assets/premiere-pro.svg';
 import FinalCutPro from '../assets/finalcutpro.svg';
 import AfterEffects from '../assets/aftereffects.svg';
@@ -129,14 +129,8 @@ const TabButton = memo(({ id, label, icon: Icon, isActive, onClick }: { id: TabI
 
 TabButton.displayName = 'TabButton';
 
-const tooltipVariant = {
-  rest: { opacity: 0, y: 10 },
-  hover: { opacity: 1, y: 0, transition: { duration: 0.2 } },
-};
-const dotVariant = {
-  rest: {},
-  hover: { scale: 1.5 },
-};
+
+
 
 const MinimalCodingSkills = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
