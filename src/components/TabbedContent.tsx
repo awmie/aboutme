@@ -91,28 +91,37 @@ const projects = [
     tech: ['React', 'Next.js', 'Tailwind CSS', 'Framer Motion', 'Particles.js']
   },
   {
-    title: 'Python Online',
-    subtitle: 'Interactive Python Code Runner',
-    description: 'This project allows users to run Python code directly in their browser using PyScript, providing a seamless, interactive environment for learning and experimentation.',
+    title: 'Run Python',
+    subtitle: 'Python Web Editor',
+    description: 'A modern, browser-based Python code editor with real-time syntax highlighting and execution capabilities.',
     features: [
-      { icon: <Terminal className="w-6 h-6" />, text: 'Browser-based Code Execution' },
-      { icon: <Play className="w-6 h-6" />, text: 'Real-time Code Running' },
-      { icon: <Zap className="w-6 h-6" />, text: 'No Installation Required' },
-      { icon: <BookOpen className="w-6 h-6" />, text: 'Perfect for Learning' }
+      { icon: <Moon className="w-6 h-6" />, text: 'Dark/Light Theme Support' },
+      { icon: <Terminal className="w-6 h-6" />, text: 'Live Code Execution' },
+      { icon: <Zap className="w-6 h-6" />, text: 'Package Installation' },
+      { icon: <BookOpen className="w-6 h-6" />, text: 'Multiple File Management' }
     ],
     links: [
-      { type: 'demo', url: 'https://awmie.github.io/PythonOnline/', icon: <Globe className="w-6 h-6" /> },
-      { type: 'github', url: 'https://github.com/awmie/PythonOnline.git', icon: <GithubIcon className="w-6 h-6" /> }
+      { type: 'demo', url: 'https://pythonline.vercel.app/', icon: <Globe className="w-6 h-6" /> },
+      { type: 'github', url: 'https://github.com/awmie/RunPython.git', icon: <GithubIcon className="w-6 h-6" /> }
     ],
-    tech: ['PyScript', 'Python', 'HTML', 'CSS', 'JavaScript']
+    tech: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Pyodide', 'CodeMirror']
   }
 ];
 
 const TabButton = memo(({ id, label, icon: Icon, isActive, onClick }: { id: TabId; label: string; icon: typeof tabs[number]['icon']; isActive: boolean; onClick: () => void; }) => (
-  <button id={id} onClick={onClick} className={`
-      flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300
-      ${isActive ? 'text-black dark:text-blue-400 bg-zinc-100/80 dark:bg-zinc-800/50 shadow-lg dark:shadow-blue-500/20 shadow-black/10 scale-105' : 'text-zinc-600 dark:text-zinc-400 hover:text-black dark:hover:text-blue-400'}
-    `} aria-selected={isActive} role="tab">
+  <button 
+    id={id} 
+    onClick={onClick} 
+    className={`
+        flex items-center gap-2 px-4 py-2 rounded-xl transition-all duration-300
+        ${isActive 
+        ? 'bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-gray-900 dark:text-white shadow-sm' 
+        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+        }
+    `} 
+    aria-selected={isActive} 
+    role="tab"
+  >
     <Icon className="w-4 h-4" />
     <span>{label}</span>
   </button>
@@ -131,34 +140,35 @@ const dotVariant = {
 
 const MinimalCodingSkills = () => {
   const [selectedId, setSelectedId] = useState<number | null>(null);
-  const randomValues = useRef(codingSkills.map(() => ({
-    x: (Math.random() - 0.5) * 10,
-    y: (Math.random() - 0.5) * 10,
-    r: (Math.random() - 0.5) * 20
-  }))).current;
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-3 py-4 px-2 md:px-4">
+    <div className="flex flex-wrap items-center justify-center gap-4 py-8">
       {codingSkills.map((skill, i) => {
         const isSelected = selectedId === i;
-        const { x, y, r } = randomValues[i];
         return (
           <motion.div
             key={i}
             className="relative"
-            initial="rest"
-            animate={isSelected ? { scale: 1.1, transition: { duration: 0.2 } } : { x: [0, x, 0], y: [0, y, 0], rotate: [0, r, 0], transition: { duration: 3, repeat: Infinity, ease: "easeInOut" } }}
+            animate={isSelected ? { scale: 1.1 } : { scale: 1 }}
+            transition={{ duration: 0.2 }}
             onTouchStart={() => setSelectedId(i)}
             onTouchEnd={() => setSelectedId(null)}
             onHoverStart={() => setSelectedId(i)}
             onHoverEnd={() => setSelectedId(null)}
           >
-            <motion.div variants={dotVariant} className="bg-white/5 dark:bg-black/10 backdrop-blur-md rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center border border-black/5 dark:border-white/5 hover:border-blue-400/10 dark:hover:border-blue-500/10 hover:backdrop-blur-xl hover:bg-zinc-100/80 dark:hover:bg-zinc-800/50 hover:shadow-lg hover:shadow-black/10 dark:hover:shadow-lg dark:hover:shadow-blue-500/20">
+            <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center rounded-2xl bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300">
               <span className="text-base md:text-lg">{skill.icon}</span>
-            </motion.div>
-            <motion.div variants={tooltipVariant} initial="rest" animate={isSelected ? "hover" : "rest"} className="absolute -top-6 left-1/2 transform -translate-x-1/2 text-[10px] md:text-xs p-1 bg-black text-white rounded pointer-events-none whitespace-nowrap">
-              {skill.title}
-            </motion.div>
+            </div>
+            {isSelected && (
+              <motion.div
+                initial={{ opacity: 0, y: 5 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 5 }}
+                className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-3 py-1.5 text-xs bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 rounded-xl shadow-sm whitespace-nowrap"
+              >
+                {skill.title}
+              </motion.div>
+            )}
           </motion.div>
         );
       })}
@@ -166,15 +176,10 @@ const MinimalCodingSkills = () => {
   );
 };
 
-type HoveredCardData = {
-	type: 'video' | 'projects';
-	data: any;
-	rect: DOMRect;
-};
 
 const TabbedContent = () => {
   const [activeTab, setActiveTab] = useState<TabId>('video');
-  const [hoveredCard, setHoveredCard] = useState<HoveredCardData | null>(null);
+
 
   useEffect(() => {
     const updateThemeVariables = () => {
@@ -212,157 +217,92 @@ const TabbedContent = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleCardHoverStart = (
-    event: React.PointerEvent<HTMLDivElement>,
-    cardData: any,
-    type: 'video' | 'projects'
-  ) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    setHoveredCard({ data: cardData, rect, type });
-  };
 
-  const handleCardHoverEnd = () => {
-    setHoveredCard(null);
-  };
 
-  const renderHoveredCardPortal = () => {
-    if (!hoveredCard) return null;
-    const { rect, data, type } = hoveredCard;
-
-    return createPortal(
-      <div
-        style={{
-          position: 'fixed',
-          top: rect.top,
-          left: rect.left,
-          width: rect.width,
-          height: rect.height,
-          zIndex: 50,
-          backdropFilter: 'none',
-          WebkitBackdropFilter: 'none',
-        }}
-        className="backdrop-blur-none"
-      >
-        <div className="w-full h-full bg-white/20 dark:bg-black/30 backdrop-blur-xl rounded-[20px] border border-black/10 dark:border-white/10 p-6 shadow-lg transition-all duration-300">
-          {type === 'video' ? (
-            <>
-              {typeof data.icon === 'string' ? (
-                <div className="text-4xl mb-4">{data.icon}</div>
-              ) : (
-                data.icon
-              )}
-              <h3 className="text-lg font-semibold mb-2">{data.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{data.description}</p>
-            </>
-          ) : (
-            // Project content
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-              <div>
-                <h3 className="text-base md:text-lg font-semibold">{data.title}</h3>
-                <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">{data.subtitle}</p>
-              </div>
-              <div className="flex gap-3">
-                {data.links.map((link: any, i: number) => (
-                  <a key={i} href={link.url} target="_blank" rel="noopener noreferrer">
-                    <span className="w-6 h-6">{link.icon}</span>
-                  </a>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
-      </div>,
-      document.body
-    );
-  };
 
   const renderContent = () => {
-    const cardStyles = {
-      background: 'rgba(255, 255, 255, 0.05)',
-      borderColor: 'rgba(0, 0, 0, 0.05)',
-      backdropFilter: 'blur(8px)',
-      WebkitBackdropFilter: 'blur(8px)',
-    };
+    const projectCardClasses = "p-6 rounded-2xl bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300";
+    const videoCardClasses = "p-6 rounded-2xl bg-white/80 dark:bg-gray-800/90 backdrop-blur-sm shadow-lg hover:shadow-xl transition-all duration-300";
 
-    const commonCardClasses = `
-      p-6 rounded-[20px]
-      backdrop-blur-md
-      bg-white/10 dark:bg-black/20
-      border border-black/5 dark:border-white/10
-      transition-all duration-300
-      hover:scale-[1.01]
-      relative
-      z-20
-      ${hoveredCard ? 'opacity-30' : 'opacity-100'}
-    `;
+
+
 
     switch (activeTab) {
-      case 'video':
+        case 'video':
         return (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {videoSkills.map((skill, index) => (
               <motion.div
-                key={skill.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                className={commonCardClasses}
-                style={cardStyles}
-                onPointerEnter={(e) => handleCardHoverStart(e, skill, 'video')}
-                onPointerLeave={handleCardHoverEnd}
+              key={skill.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+              className={videoCardClasses}
+
+
               >
-                {typeof skill.icon === 'string' ? (
-                  <div className="text-4xl mb-4">{skill.icon}</div>
-                ) : (
-                  skill.icon
-                )}
-                <h3 className="text-lg font-semibold mb-2">{skill.title}</h3>
+              <div className="flex flex-col items-center text-center">
+                {skill.icon}
+                <h3 className="text-lg font-semibold mt-4 mb-2">{skill.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400">{skill.description}</p>
+              </div>
               </motion.div>
             ))}
-          </div>
+            </div>
+
+
         );
-      case 'projects':
+        case 'projects':
         return (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-20 p-2 md:p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
               <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                className={commonCardClasses}
-                style={cardStyles}
-                onPointerEnter={(e) => handleCardHoverStart(e, project, 'projects')}
-                onPointerLeave={handleCardHoverEnd}
+              key={project.title}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.05 }}
+              className={projectCardClasses}
+
+
               >
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
-                  <div>
-                    <h3 className="text-base md:text-lg font-semibold">{project.title}</h3>
-                    <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400">{project.subtitle}</p>
-                  </div>
-                  <div className="flex gap-3">
-                    {project.links.map((link, i) => (
-                      <a
-                        key={i}
-                        href={link.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <span className="w-6 h-6">{link.icon}</span>
-                      </a>
-                    ))}
-                  </div>
+              <div className="space-y-4">
+                <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-lg font-semibold">{project.title}</h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{project.subtitle}</p>
                 </div>
+                <div className="flex gap-3">
+                  {project.links.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors"
+                  >
+                    {link.icon}
+                  </a>
+                  ))}
+                </div>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
+                {project.tech.map((tech, i) => (
+                    <span key={i} className="text-xs px-3 py-1.5 rounded-xl bg-white/60 dark:bg-gray-700/60 backdrop-blur-sm">
+                  {tech}
+                  </span>
+                ))}
+                </div>
+              </div>
               </motion.div>
             ))}
-          </div>
+            </div>
+
         );
       case 'coding':
         return (
-          <div className="min-h-[50px]">
             <MinimalCodingSkills />
-          </div>
+
         );
     }
   };
@@ -393,12 +333,12 @@ const TabbedContent = () => {
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
         transition={{ duration: 0.3 }}
-        className={hoveredCard ? 'blur-sm' : ''}
+
       >
         {renderContent()}
       </motion.div>
 
-      {renderHoveredCardPortal()}
+
     </motion.section>
   );
 };
